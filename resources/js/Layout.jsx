@@ -14,8 +14,7 @@ function Layout() {
                 </div>
             </div>
         </div>
-
-      
+              
     </main>
   )
 }
