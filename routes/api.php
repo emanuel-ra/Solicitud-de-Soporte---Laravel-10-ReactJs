@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\SupportRequestController;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,4 +18,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::prefix('support')->group(function () {   
+    Route::post('/request', [SupportRequestController::class,'store']);
 });
